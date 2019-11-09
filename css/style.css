@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 400px;
+  border: 1px solid #eee;
+  font-size: 2rem;
+  background-color: white;
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+main button {
+  padding: 0.2rem 0.6rem;
+}
+#total-sum-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#total-sum-container p {
+  margin: 0 1rem;
+}
+.local-buttons,  .num-cont, .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.local-buttons * , .actions *{
+  margin: 0 0.2rem;
+}
+.num {
+  width: 20%;
+  margin: 0.4rem 0;
+}
+
+
+.mini-card {
+  border: 1px solid black;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+#local-cards {
+  width: 70%;
+}
+.add-local-card {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.mini-card-header {
+  margin: 0.5rem 2rem;
+}
+#add-local {
+  font-size: 1.3rem;
+}
+
+@media(max-width:450px) {
+  main {
+    width: 300px;
+  }
+  #total-sum-container {
+    font-size:1.5rem;
+  }
+  .mini-card {
+    height: 23vh;
+    padding: 0;
+  }
+  .mini-card-header {
+    font-size: 1rem;
+  }
+  .actions *{
+    margin: 0 0.1rem;
+    padding: 0.1rem;
+  }
+  .local-buttons * {
+    margin: 0 0.1rem;
+    padding: 0.1rem 0.3rem;
+  }
+}
