@@ -130,7 +130,7 @@ const cardMarkUp = (localSum, id, buttonNum) => `
     </div>
 
     <div class="num-cont">
-      <input type="number" name="num" class = "num">
+      <input type="number" name="num" class = "num" value= ${buttonNum}>
     </div>
 
     <div class="actions">
@@ -176,6 +176,12 @@ localCards.addEventListener('input', ({ target }) => {
   const id = target.parentNode.parentNode.dataset.id;
   const value = target.value;
   storeInstance.dispatch('changeButtonNum', { id: id, value: value })
+})
+localCards.addEventListener('change', ({ target }) => {
+ 
+  const id = target.parentNode.parentNode.dataset.id;
+  const value = target.value;
+  storeInstance.dispatch('alterNumber', { id: id, value, operation: 'add' })
 })
 
 storeInstance.subscribe(state => {
